@@ -1,0 +1,153 @@
+/* --------------------------------------------------------- */
+
+/* @MEDIAS, para adaptar la WEB a modo MOBILE */
+
+@media screen and (max-width: 1375px) {}
+
+@media screen and (max-width: 920px) {
+
+
+
+    .galeria {
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "img1";
+
+    }
+
+
+    .atraccion {
+        flex-direction: column;
+        padding: 5rem 0rem;
+    }
+
+    .encabezado {
+        margin-top: 1rem;
+        margin-right: 1rem;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .header {
+        font-size: .8rem;
+    }
+
+    .main {
+        font-size: .9rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .header {
+        font-size: .8rem;
+    }
+
+    .main {
+        font-size: .9rem;
+    }
+
+    .logoHeaderSup {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .email {
+        display: none;
+    }
+
+    .cellphone {
+        display: none;
+    }
+
+    .search {
+        display: none;
+    }
+
+    .galeria {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "img1";
+    }
+
+    .habitaciones {
+        flex-direction: column;
+        padding: 5rem 0rem;
+    }
+
+    .atraccion {
+        flex-direction: column;
+        padding: 5rem 0rem;
+    }
+
+    .encabezado {
+        margin-top: 1rem;
+        margin-right: 1rem;
+    }
+
+    .lightBox {
+        display: none;
+    }
+
+}
+
+
+@media screen and (max-width: 300px) {
+
+    .logoHeaderSup {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .email {
+        display: none;
+    }
+
+    .cellphone {
+        display: none;
+    }
+
+    .search {
+        display: none;
+    }
+
+    .logo span {
+        display: none;
+    }
+
+    .galeria {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "img1";
+
+    }
+
+
+    .habitaciones {
+        flex-direction: column;
+        padding-top: 6rem;
+    }
+
+    .atraccion {
+        flex-direction: column;
+        padding: 5rem 0rem;
+    }
+
+    .encabezado {
+        margin-top: 1rem;
+        margin-right: 1rem;
+    }
+
+    .lightBox {
+        display: none;
+    }
+
+    /* .liLogo{
+        display: none;
+    } */
+
+}

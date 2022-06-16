@@ -1,0 +1,334 @@
+/*Main Index HTML LA POSADA*/
+
+.main {
+    grid-area: main;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: columns;
+    width: 100%;
+    background-color: rgb(243, 236, 236);
+
+}
+
+.informacion {
+    width: 100%;
+    padding: 20px 0px;
+    color: rgb(253, 9, 9);
+    background-color: rgb(94, 206, 169);
+    text-align: center;
+    text-transform: uppercase;
+
+
+    /* background: url(../assets/img/posada_de_campo_los_aromitos_paisaje_espinillo.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; */
+
+}
+
+.galeria {
+    background-color: var(--colorBody);
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "img2";
+    row-gap: row;
+    padding: 1rem;
+}
+
+.galeria img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 10px rgb(240, 52, 52);
+    *border-radius: 10px;
+}
+
+
+.footInfo {
+    width: 100%;
+    text-align: center;
+    background-color: rgb(165, 248, 55);
+
+}
+
+
+/*Main SERVICIOS*/
+
+.resaltado {
+    background-color: aquamarine;
+}
+
+.resaltado .bloque-info {
+    background: #666;
+    color: #fff;
+    padding: 0.2em 0.5em;
+    box-sizing: border-box;
+
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    margin-top: 0.2em;
+
+    transition: max-height 0.5s;
+}
+
+.resaltado:hover .bloque-info {
+    max-height: 400px;
+    transition: max-height ease-in-out 1s;
+}
+
+
+/*Main ALREDEDORES*/
+
+.atracciones {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "atracion1"
+        "atracion2"
+        "atracion3"
+        "atracion4"
+        "atracion5"
+        "atracion6";
+    row-gap: row;
+    *gap: 10px;
+}
+
+
+.atraccion {
+    width: auto;
+    *height: 30rem;
+    height: 50vh;
+    padding: 1rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+}
+
+.atraccion img {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 0px 10px rgb(240, 52, 52);
+    border-radius: 100%;
+}
+
+
+.encabezado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    padding-left: 1rem;
+}
+
+
+/* MAIN Habitaciones Estilos que no comparte con el INDEX */
+
+.grupHabitaciones {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "habitaciones1"
+        "habitaciones2"
+        "habitaciones3"
+        "habitaciones4";
+    row-gap: row;
+}
+
+
+.habitaciones {
+    width: auto;
+    height: 19rem;
+    padding: 1rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+}
+
+.habitaciones img {
+    width: 80%;
+    height: 100%;
+    box-shadow: 0px 0px 10px rgb(95, 6, 6);
+    border-radius: 10px;
+}
+
+
+/* MAIN Servicios Estilos que no comparte con el INDEX */
+
+
+
+.grupInformacion {
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 1.25rem;
+    text-align: center;
+    *justify-content: center;
+    *align-items: center;
+    *align-content: center;
+}
+
+.listadoBonito {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1rem;
+    border: solid rgb(155, 63, 63) .1em;
+    background-color: #2196F3;
+}
+
+.listadoBonito li {
+    text-align: center;
+    border: solid rgb(155, 63, 63) .1em;
+    padding: 1rem 1rem;
+    background-color: #fff;
+}
+
+
+
+/* MAIN GALLERY Estilos que no comparte con el INDEX */
+
+
+.h1Gallery {
+    width: 100%;
+    height: 6.25rem;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 1rem;
+    font-size: 50px;
+}
+
+.galleryLinea {
+    background: #550b51;
+    height: 0.375rem;
+    width: 100%;
+    display: block;
+}
+
+.sectionGaleria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    width: 95%;
+    margin: auto;
+    grid-gap: 10px;
+    padding-top: 40px;
+    padding-bottom: 5px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.galleryClassA {
+    display: block;
+    box-shadow: 0 0 8px rgba(221, 6, 6, 0.5);
+}
+
+.galleryClassA img {
+    width: 100%;
+    height: 18.75rem;
+    vertical-align: top;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+
+.lightBox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    //background: rgb(0, 0, 0, .5);
+    transform: transform .6s ease-in-out;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+}
+
+.lightBox img {
+    width: 75vh;
+    max-height: 70vh;
+}
+
+.lightBox:target {
+    transform: scale(1);
+
+}
+
+.close {
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background: #550b51;
+    color: aliceblue;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+}
+
+.next {
+    display: block;
+    background: #550b51;
+    color: aliceblue;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+/* MAIN CONTACTO Estilos que no comparte con el INDEX */
+.degradado {
+    background: -webkit-gradient(linear, left top, left bottom, from(#0a5c71), to(#063642));
+    background: -webkit-linear-gradient(top, #0a5c71 0%, #063642 100%);
+    background: -o-linear-gradient(top, #0a5c71 0%, #063642 100%);
+    background: linear-gradient(to bottom, #0a5c71 0%, #063642 100%);
+    background-color: #0a5c71;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding-left: 15rem;
+
+}
+
+
+.formBoton {
+    border: 1px solid #063642;
+    border-radius: .3rem;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: normal;
+    color: #ffffff;
+    padding: 0.2em 0.5em;
+    font-family: "Exo 2", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5em;
+    margin: 0.625rem 0.625rem;
+    user-select: none;
+    cursor: pointer;
+}
+
+.checkContainer {
+    cursor: pointer;
+    user-select: none;
+    padding-left: .5rem;
+}

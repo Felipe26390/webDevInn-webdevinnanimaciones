@@ -1,0 +1,191 @@
+
+.header {
+    //padding: 0rem 1.25rem;
+    background-color: var(--colorHeader);
+    height: 20vh;
+    grid-area: header;
+    width: 100%;
+    padding-top: 0.313rem;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.headerSup {
+    width: 100%;
+    height: auto;
+    //padding: 0rem 1.25rem;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(5, 5, 5);
+    background-color: rgb(69, 189, 109);
+    align-self: center;
+    font-size: .5rem;
+}
+
+.logoHeaderSup {
+    width: 3rem;
+    height: 3rem;
+    padding: 0rem 1.25rem;
+    *display: flex;
+    *justify-content: start;
+}
+
+
+/* .email {}
+
+.cellphone {} */
+
+
+.search input {
+    background-color: #ffffff;
+    color: black;
+    border-radius: 0.313rem;
+    border: 3px solid rgb(17, 18, 19);
+    width: 12.5rem;
+    padding: 0.625rem;
+}
+
+.headerSupIcons {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0px 20px;
+    gap: 2rem;
+    color: rgb(63, 85, 78);
+    font-size: 1.5rem;
+}
+
+.headerSupIcons img {
+    padding: 0px 20px;
+}
+
+/* Header Inferior Barra Menu */
+
+.headerNavMenu {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.botonesHeaderMenu {
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: rgb(69, 189, 109);
+    text-transform: uppercase;
+
+}
+
+.liLogo {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: relative;
+    height: 100%;
+    width: fit-content;
+}
+
+.logo {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+.logo:hover {
+    transform: scale(1.2);
+    transition-property: all;
+    transition-duration: 1.5s;
+    border-radius: .2rem;
+    background: #023877;
+    box-shadow: 0px 0px 10px 0px rgba(221, 24, 24, 0.5);
+}
+
+/* Class activa la ubicacion en donde estamos en la botonera del header y el sub menu */
+
+.active {
+    transform: scale(1.1);
+    opacity: 0.6;
+    pointer-events: none;
+    background: #023877;
+    color: rgb(255, 0, 0);
+    box-shadow: 0px 0px 10px 0px rgba(165, 48, 48, 0.5);
+    border-radius: .2rem;
+}
+
+/*Header Inferior Barra Menu--> SUBMENU de Galeria de Fotos  */
+
+nav ul li ul {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 90px;
+    left: -5px;
+    padding: 14px 0px;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 10;
+    background: white;
+    box-shadow: 0px 0px 10px 0px rgba(165, 48, 48, 0.5);
+    transition: all 300ms ease;
+    border-radius: .5rem;
+}
+
+nav ul li:hover ul {
+    visibility: visible;
+    opacity: 1;
+    top: 70px;
+}
+
+nav ul li ul:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid white;
+    position: absolute;
+    top: -12px;
+    left: 20px;
+}
+
+nav ul li ul li a {
+    display: block;
+    color: rgb(47, 82, 82);
+    padding: 6px;
+    padding-left: 14px;
+    margin-top: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: all 300ms ease;
+}
+
+nav ul li ul li a:hover {
+    opacity: 2;
+    background: rgb(140, 196, 196);
+    color: rgb(202, 42, 42);
+    transform: scale(1.1);
+    padding-left: 30px;
+    font-size: 14px;
+    box-shadow: 0px 0px 10px 0px rgba(165, 48, 48, 0.5);
+}
