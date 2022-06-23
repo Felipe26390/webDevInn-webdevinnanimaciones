@@ -1,0 +1,74 @@
+/*operaciones*/
+$ancho:195rem;
+$blue:rgb(204, 204, 211);
+$green:rgb(66, 122, 66);
+
+.headerSup{
+    background-color: $green;
+    width:$ancho/2;
+}
+
+.headerNavMenu{
+    background-color: $blue;
+    width:($ancho/2)-1;
+   
+}
+
+/*condicionales*/
+$colorBase:marron;
+
+.headerSup{
+    @if $colorBase == verde{
+        color:blue;
+    } 
+    @else if $colorBase == celeste{
+        color:rgb(99, 185, 159);
+    }
+    @else {
+        color:black;
+        font-size: 1.5rem;
+        background-color: azure;
+    }
+
+}
+
+$mostrar:false;
+.headerSup{
+    @if $mostrar{
+        border: 2px dashed red;
+        font-size: 1rem;
+        background-color: rgb(26, 124, 124);
+       
+    }
+}
+
+/*Extend*/
+.redSocial{
+    border:2px solid red;
+    background-color: gold;
+}
+
+.redsocial--social{
+    @extend .redSocial;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:white;
+    border-radius: 5px;
+}
+.redsocial--nueva{
+    @extend .redSocial;
+    font-size: 30px;
+    color:green;
+    border:3px dashed blue;
+}
+
+
+/*mixin*/
+@mixin sizes ($height, $width){
+    height: $height;
+    width: $width;
+}
+
+.my_mixin{
+    @include sizes (500px,50px);
+    background-color: lightcoral;
+}
