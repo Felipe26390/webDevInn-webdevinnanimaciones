@@ -1,20 +1,16 @@
-
 .header {
-    //padding: 0rem 1.25rem;
-    background-color: var(--colorHeader);
+    width: 100%;
     height: 20vh;
     grid-area: header;
-    width: 100%;
-    padding-top: 0.313rem;
+    //padding-top: 0.313rem;
     display: flex;
     flex-direction: column;
-
+    background-color: rgb(236, 236, 213);
 }
 
 .headerSup {
     width: 100%;
     height: auto;
-    //padding: 0rem 1.25rem;
     display: flex;
     align-items: center;
     align-content: center;
@@ -22,9 +18,10 @@
     flex-wrap: wrap;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(5, 5, 5);
-    background-color: rgb(69, 189, 109);
+    background-color: rgb(218, 204, 82);
     align-self: center;
     font-size: .5rem;
+
 }
 
 .logoHeaderSup {
@@ -79,13 +76,13 @@
 
 .botonesHeaderMenu {
     width: 100%;
-    height: 8vh;
+    height: 11vh;
     display: flex;
     align-items: center;
     align-content: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    background-color: rgb(69, 189, 109);
+    background-color: rgb(218, 204, 82);
     text-transform: uppercase;
 
 }
@@ -116,8 +113,8 @@
     transition-property: all;
     transition-duration: 1.5s;
     border-radius: .2rem;
-    background: #023877;
-    box-shadow: 0px 0px 10px 0px rgba(221, 24, 24, 0.5);
+    background-color: rgb(236, 236, 213);
+    box-shadow: 0px 0px 10px 0px rgba(7, 6, 6, 0.5);
 }
 
 /* Class activa la ubicacion en donde estamos en la botonera del header y el sub menu */
@@ -126,9 +123,19 @@
     transform: scale(1.1);
     opacity: 0.6;
     pointer-events: none;
-    background: #023877;
-    color: rgb(255, 0, 0);
-    box-shadow: 0px 0px 10px 0px rgba(165, 48, 48, 0.5);
+    background-color: rgb(236, 236, 213);
+    color: rgb(3, 3, 3);
+    box-shadow: 0px 0px 10px 0px rgba(7, 6, 6, 0.5);
+    border-radius: .2rem;
+}
+
+.active0 {
+    transform: scale(1.1);
+    opacity: 0.6;
+    pointer-events: all;
+    background-color: rgb(236, 236, 213);
+    color: rgb(3, 3, 3);
+    box-shadow: 0px 0px 10px 0px rgba(7, 6, 6, 0.5);
     border-radius: .2rem;
 }
 
@@ -182,10 +189,10 @@ nav ul li ul li a {
 
 nav ul li ul li a:hover {
     opacity: 2;
-    background: rgb(140, 196, 196);
-    color: rgb(202, 42, 42);
+    background: rgb(218, 204, 82);
+    color: rgb(0, 0, 0);
     transform: scale(1.1);
     padding-left: 30px;
     font-size: 14px;
-    box-shadow: 0px 0px 10px 0px rgba(165, 48, 48, 0.5);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }

@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* Variables Generales */
 * {
   margin: 0;
   padding: 0;
@@ -27,10 +28,39 @@ html {
   scroll-behavior: smooth;
 }
 
+[data-title]:hover:after {
+  opacity: 1;
+  -webkit-transition: all 0.1s ease 0.5s;
+  transition: all 0.1s ease 0.5s;
+  visibility: visible;
+}
+
+[data-title]:after {
+  content: attr(data-title);
+  background-color: #333;
+  color: #fff;
+  font-size: 14px;
+  font-family: Raleway;
+  position: absolute;
+  bottom: -1.6em;
+  left: 100%;
+  white-space: nowrap;
+  -webkit-box-shadow: 1px 1px 3px #222222;
+          box-shadow: 1px 1px 3px #222222;
+  opacity: 0;
+  border: 1px solid #111111;
+  visibility: hidden;
+  border-radius: 6px;
+}
+
+[data-title] {
+  position: relative;
+}
+
 body {
   width: 100%;
   height: auto;
-  background-color: green;
+  background-color: #eef5ee;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -74,10 +104,7 @@ body {
 
 @media screen and (max-width: 500px) {
   .header {
-    font-size: .8rem;
-  }
-  .main {
-    font-size: .9rem;
+    font-size: .5rem;
   }
   .logoHeaderSup {
     width: 2rem;
@@ -91,6 +118,15 @@ body {
   }
   .search {
     display: none;
+  }
+  .logo span {
+    display: none;
+  }
+  .main {
+    font-size: .9rem;
+  }
+  #infoParrafo {
+    text-align: center;
   }
   .galeria {
     -ms-grid-columns: 1fr;
@@ -173,13 +209,11 @@ body {
 }
 
 .header {
-  background-color: var(--colorHeader);
+  width: 100%;
   height: 20vh;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: header;
-  width: 100%;
-  padding-top: 0.313rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -187,6 +221,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: #ececd5;
 }
 
 .headerSup {
@@ -207,7 +242,7 @@ body {
       flex-wrap: wrap;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #050505;
-  background-color: #45bd6d;
+  background-color: #dacc52;
   -ms-flex-item-align: center;
       align-self: center;
   font-size: .5rem;
@@ -281,7 +316,7 @@ body {
 
 .botonesHeaderMenu {
   width: 100%;
-  height: 8vh;
+  height: 11vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -294,7 +329,7 @@ body {
       justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  background-color: #45bd6d;
+  background-color: #dacc52;
   text-transform: uppercase;
 }
 
@@ -344,9 +379,9 @@ body {
   -webkit-transition-duration: 1.5s;
           transition-duration: 1.5s;
   border-radius: .2rem;
-  background: #023877;
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(221, 24, 24, 0.5);
-          box-shadow: 0px 0px 10px 0px rgba(221, 24, 24, 0.5);
+  background-color: #ececd5;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(7, 6, 6, 0.5);
+          box-shadow: 0px 0px 10px 0px rgba(7, 6, 6, 0.5);
 }
 
 /* Class activa la ubicacion en donde estamos en la botonera del header y el sub menu */
@@ -355,10 +390,22 @@ body {
           transform: scale(1.1);
   opacity: 0.6;
   pointer-events: none;
-  background: #023877;
-  color: red;
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(165, 48, 48, 0.5);
-          box-shadow: 0px 0px 10px 0px rgba(165, 48, 48, 0.5);
+  background-color: #ececd5;
+  color: #030303;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(7, 6, 6, 0.5);
+          box-shadow: 0px 0px 10px 0px rgba(7, 6, 6, 0.5);
+  border-radius: .2rem;
+}
+
+.active0 {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  opacity: 0.6;
+  pointer-events: all;
+  background-color: #ececd5;
+  color: #030303;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(7, 6, 6, 0.5);
+          box-shadow: 0px 0px 10px 0px rgba(7, 6, 6, 0.5);
   border-radius: .2rem;
 }
 
@@ -419,14 +466,14 @@ nav ul li ul li a {
 
 nav ul li ul li a:hover {
   opacity: 2;
-  background: #8cc4c4;
-  color: #ca2a2a;
+  background: #dacc52;
+  color: black;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   padding-left: 30px;
   font-size: 14px;
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(165, 48, 48, 0.5);
-          box-shadow: 0px 0px 10px 0px rgba(165, 48, 48, 0.5);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
 /*Main Index HTML LA POSADA*/
@@ -447,50 +494,270 @@ nav ul li ul li a:hover {
   background-color: #f3ecec;
 }
 
-.informacion {
+#sectionPosada {
   width: 100%;
-  padding: 20px 0px;
-  color: #fd0909;
-  background-color: #5ecea9;
-  text-align: center;
-  text-transform: uppercase;
-  /* background: url(../assets/img/posada_de_campo_los_aromitos_paisaje_espinillo.jpg);
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; */
+  height: 35rem;
+  color: #f8efef;
+  background-image: url(../assets/img/posada_de_campo_los_aromitos_paisaje_tormenta.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: .5rem 1rem 2rem 2rem;
 }
 
-.galeria {
-  background-color: var(--colorBody);
+#sectionPosada hgroup h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3rem;
+  padding-bottom: 2rem;
+}
+
+#sectionPosada hgroup h2 {
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 2rem;
+}
+
+#sectionInfo {
   width: 100%;
   height: auto;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem 1rem 2rem 2rem;
+  background-color: #ececd5;
+}
+
+#sectionInfo #infoH2 {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: #550b51;
+  padding-bottom: .5rem;
+}
+
+#sectionInfo #infoParrafo {
+  color: #550b51;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  padding: 0rem 10rem;
+}
+
+/* Main Nostros*/
+#nosotros {
+  width: 100%;
+  height: 20rem;
+  color: #f8efef;
+  background-image: url(../assets/img/prueva1.jpeg);
+  background-size: cover;
+  background-position: bottom;
+  opacity: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: .5rem 1rem 2rem 2rem;
+}
+
+#nosotros hgroup h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3rem;
+  padding-bottom: 2rem;
+}
+
+#nosotros hgroup h2 {
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 2rem;
+}
+
+.informacion {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem 1rem 2rem 2rem;
+  background-color: #ececd5;
+}
+
+.informacion #NostH2 {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: #550b51;
+  padding-bottom: .5rem;
+}
+
+.informacion #NostParrafo {
+  color: #550b51;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  padding: 0rem 10rem;
+}
+
+/* MAIN Habitaciones Estilos que no comparte con el INDEX */
+#infoHabitacion {
+  width: 100%;
+  height: 20rem;
+  color: #f8efef;
+  background-image: url(../assets/img/prueba3.jpeg);
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: .5rem 1rem 2rem 2rem;
+}
+
+#infoHabitacion hgroup h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3rem;
+  padding-bottom: 2rem;
+}
+
+#infoHabitacion hgroup h2 {
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 2rem;
+}
+
+.grupHabitaciones {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
-      grid-template-areas: "img2";
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-areas: "habitaciones1" "habitaciones2" "habitaciones3" "habitaciones4";
   row-gap: row;
-  padding: 1rem;
 }
 
-.galeria img {
-  width: 100%;
-  height: auto;
-  -webkit-box-shadow: 0px 0px 10px #f03434;
-          box-shadow: 0px 0px 10px #f03434;
-  *border-radius: 10px;
+.habitaciones {
+  width: auto;
+  height: 55vh;
+  padding: 1rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #ececd5;
 }
 
-.footInfo {
+.habitaciones img {
   width: 100%;
+  height: 100%;
+  -webkit-box-shadow: 0px 0px 10px #1a1818;
+          box-shadow: 0px 0px 10px #1a1818;
+  border-radius: 1rem;
+}
+
+/* MAIN SERVICIOS Estilos que no comparte con el INDEX */
+#headServicios {
+  width: 100%;
+  height: 20rem;
+  color: #f8efef;
+  background-image: url(../assets/img/posada_de_campo_los_aromitos_huerta_productos_caceros.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: .5rem 1rem 2rem 2rem;
+}
+
+#headServicios hgroup h1 {
   text-align: center;
-  background-color: #a5f837;
+  text-transform: uppercase;
+  font-size: 3rem;
+  padding-bottom: 2rem;
 }
 
-/*Main SERVICIOS*/
+#headServicios hgroup h2 {
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 2rem;
+}
+
 .resaltado {
   background-color: aquamarine;
 }
@@ -515,108 +782,6 @@ nav ul li ul li a:hover {
   transition: max-height ease-in-out 1s;
 }
 
-/*Main ALREDEDORES*/
-.atracciones {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-areas: "atracion1" "atracion2" "atracion3" "atracion4" "atracion5" "atracion6";
-  row-gap: row;
-  *gap: 10px;
-}
-
-.atraccion {
-  width: auto;
-  *height: 30rem;
-  height: 50vh;
-  padding: 1rem 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.atraccion img {
-  width: 100%;
-  height: 100%;
-  -webkit-box-shadow: 0px 0px 10px #f03434;
-          box-shadow: 0px 0px 10px #f03434;
-  border-radius: 100%;
-}
-
-.encabezado {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  text-align: center;
-  padding-left: 1rem;
-}
-
-/* MAIN Habitaciones Estilos que no comparte con el INDEX */
-.grupHabitaciones {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr;
-      grid-template-areas: "habitaciones1" "habitaciones2" "habitaciones3" "habitaciones4";
-  row-gap: row;
-}
-
-.habitaciones {
-  width: auto;
-  height: 19rem;
-  padding: 1rem 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.habitaciones img {
-  width: 80%;
-  height: 100%;
-  -webkit-box-shadow: 0px 0px 10px #5f0606;
-          box-shadow: 0px 0px 10px #5f0606;
-  border-radius: 10px;
-}
-
-/* MAIN Servicios Estilos que no comparte con el INDEX */
 .grupInformacion {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -659,6 +824,106 @@ nav ul li ul li a:hover {
   background-color: #fff;
 }
 
+/*Main ALREDEDORES*/
+.atracciones {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-areas: "atracion1" "atracion2" "atracion3" "atracion4" "atracion5" "atracion6";
+  row-gap: row;
+}
+
+#headAlrededores {
+  width: 100%;
+  height: 20rem;
+  color: #f8efef;
+  background-image: url(../assets/img/prueba5.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: .5rem 1rem 2rem 2rem;
+}
+
+#headAlrededores hgroup h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3rem;
+  padding-bottom: 2rem;
+}
+
+#headAlrededores hgroup h2 {
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 2rem;
+}
+
+.atraccion {
+  width: auto;
+  height: 55vh;
+  padding: 1rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #ececd5;
+}
+
+.atraccion img {
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: 0px 0px 10px #1a1818;
+          box-shadow: 0px 0px 10px #1a1818;
+  border-radius: 1rem;
+}
+
+#aux {
+  padding-top: 3rem;
+}
+
+.encabezado {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center;
+  padding: 1rem 1rem;
+}
+
 /* MAIN GALLERY Estilos que no comparte con el INDEX */
 .h1Gallery {
   width: 100%;
@@ -670,7 +935,7 @@ nav ul li ul li a:hover {
 }
 
 .galleryLinea {
-  background: #550b51;
+  background: #000000;
   height: 0.375rem;
   width: 100%;
   display: block;
@@ -774,6 +1039,8 @@ nav ul li ul li a:hover {
 }
 
 .formulario {
+  width: 100%;
+  height: 20rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -788,7 +1055,7 @@ nav ul li ul li a:hover {
       -ms-flex-align: center;
           align-items: center;
   gap: 1rem;
-  padding-left: 15rem;
+  padding-left: 0rem;
 }
 
 .formBoton {
@@ -832,7 +1099,7 @@ nav ul li ul li a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #033cf5;
+  background-color: #ececd5;
 }
 
 .footerNavMenu {
@@ -859,8 +1126,7 @@ nav ul li ul li a:hover {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   text-transform: uppercase;
-  border-top: solid 3px #023877;
-  background-color: #45bd6d;
+  background-color: #dacc52;
 }
 
 .firma {
@@ -879,8 +1145,8 @@ nav ul li ul li a:hover {
           justify-content: start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  border-top: solid 3px #023877;
-  background-color: #45bd6d;
+  border-top: solid 0.5rem #ececd5;
+  background-color: #dacc52;
 }
 
 /* ------------------------------------------------------------------------------ */
@@ -963,46 +1229,32 @@ nav ul li ul li a:hover {
 }
 
 /* ----------------------------------------------------------------------------------------------------------------------------------------------- */
-/*operaciones*/
-.headerSup {
-  background-color: #427a42;
-  width: 97.5rem;
-}
-
-.headerNavMenu {
-  background-color: #ccccd3;
-  width: 96.5rem;
-}
-
-/*condicionales*/
-.headerSup {
-  color: black;
-  font-size: 1.5rem;
-  background-color: azure;
-}
-
-/*Extend*/
-.redSocial, .redsocial--social, .redsocial--nueva {
+.demoExtend, .cards {
   border: 2px solid red;
   background-color: gold;
 }
 
-.redsocial--social {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  color: white;
-  border-radius: 5px;
-}
-
-.redsocial--nueva {
-  font-size: 30px;
-  color: green;
-  border: 3px dashed blue;
+.cards {
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: 0px 0px 10px #1a1818;
+          box-shadow: 0px 0px 10px #1a1818;
+  border-radius: 1rem;
 }
 
 /*mixin*/
 .my_mixin {
-  height: 500px;
-  width: 50px;
-  background-color: lightcoral;
+  height: 20rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #c5e8be;
 }
 /*# sourceMappingURL=style.css.map */

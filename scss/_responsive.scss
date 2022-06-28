@@ -42,11 +42,7 @@
 @media screen and (max-width: 500px) {
 
     .header {
-        font-size: .8rem;
-    }
-
-    .main {
-        font-size: .9rem;
+        font-size: .5rem;
     }
 
     .logoHeaderSup {
@@ -64,6 +60,23 @@
 
     .search {
         display: none;
+    }
+
+    .logo span {
+        display: none;
+    }
+
+    // .liLogo{
+    //     width:fit-content;
+    //     height: 2rem;
+    // }
+
+    .main {
+        font-size: .9rem;
+    }
+
+    #infoParrafo{
+        text-align: center;
     }
 
     .galeria {
