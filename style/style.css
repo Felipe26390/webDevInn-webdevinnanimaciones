@@ -1229,6 +1229,22 @@ nav ul li ul li a:hover {
 }
 
 /* ----------------------------------------------------------------------------------------------------------------------------------------------- */
+/*mapas*/
+.btn--twitter {
+  background-color: #55aCee;
+  border-radius: .2rem;
+}
+
+.btn--facebook {
+  background-color: #3a5795;
+  border-radius: .2rem;
+}
+
+.btn--instagram {
+  background-color: #C25E30;
+  border-radius: .2rem;
+}
+
 .demoExtend, .cards {
   border: 2px solid red;
   background-color: gold;
