@@ -7,12 +7,16 @@
     display: flex;
     flex-direction: column;
     background-color: rgb(236, 236, 213);
+    position: static;
+
 }
 
 
 .footerNavMenu {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
+
 }
 
 .botonesFooterMenu {
@@ -21,10 +25,42 @@
     display: flex;
     align-items: center;
     align-content: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     text-transform: uppercase;
     background-color: rgb(218, 204, 82);
+}
+
+.headerSupIcons {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0px 0px;
+    gap: 1rem;
+    font-size: 2rem;
+
+    .liLogo {
+
+        .logo {
+            transform: scale(1.1);
+            transition-property: all;
+            transition-duration: 1.5s;
+            border-radius: .2rem;
+            background-color: $colorHeaderSup;
+  
+
+            i {
+                color: $colorHeaderSVG;
+                padding: .1px .4rem;
+                display: flex;
+                align-items: center;
+                align-content: center;
+
+            }
+        }
+    }
 }
 
 .firma {
@@ -35,6 +71,6 @@
     align-content: center;
     justify-content: start;
     flex-wrap: wrap;
-    border-top: solid .5rem rgb(236, 236, 213);
+    border-top: solid .3rem rgb(236, 236, 213);
     background-color: rgb(218, 204, 82);
 }

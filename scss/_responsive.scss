@@ -1,20 +1,97 @@
+$colorHeader:rgb(218, 204, 82);
+$colorHeaderSup:rgb(218, 204, 82);
+$colorHeaderInferior:rgb(218, 204, 82);
+$colorSubmenu:rgb(242, 239, 217);
+$colorHeaderFuente:rgb(0, 0, 0);
+$colorHover:rgb(236, 236, 213);
+$colorBoxShadow:rgba(251, 228, 228, 0.5);
+$colorHeaderSVG: rgba(101, 51, 25, 255);
+
+
+/*ELEMENTOS RESPONSIVOS*/
+
+.icon__menu {
+    font-size: 26px;
+    color: black;
+    cursor: pointer;
+    width: 26px;
+    height: 100%;
+    display: none;
+    align-items: center;
+}
+
+#label__check {
+    width: 26px;
+    height: 100%;
+    display: none;
+}
+
+#check__menu {
+    display: none;
+}
+
 /* --------------------------------------------------------- */
 
-/* @MEDIAS, para adaptar la WEB a modo MOBILE */
 
-@media screen and (max-width: 1375px) {}
-
-@media screen and (max-width: 920px) {
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
 
 
+
+    #infoParrafo {
+        text-align: center;
+    }
+
+    .headerSupIcons{
+        font-size: 1rem;
+    }
+
+    .headerSuperior {
+        padding: 10px;
+    }
+
+    .logo img {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    nav>ul {
+        flex-direction: column;
+        background-color: $colorHeaderInferior;
+        position: fixed;
+        left: 0;
+        top: 158px;
+        width: 100%;
+        height: 0px;
+        transition: all 300ms ease;
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    #label__check {
+        display: block;
+    }
+
+    .icon__menu {
+        display: flex;
+    }
+
+    #check__menu:checked~nav>ul {
+        height: 400px;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    main {
+        margin-top: 100px;
+    }
 
     .galeria {
-
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
         grid-template-areas:
             "img1";
-
     }
 
 
@@ -27,69 +104,107 @@
         margin-top: 1rem;
         margin-right: 1rem;
     }
-}
 
-@media screen and (max-width: 730px) {
-    .header {
-        font-size: .8rem;
+    .lightBox {
+        display: none;
     }
 
-    .main {
-        font-size: .9rem;
+    .divSection {
+        display: flex;
+        flex-direction: column;
     }
+
 }
 
-@media screen and (max-width: 500px) {
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {
 
     .header {
         font-size: .5rem;
     }
 
+.headerSupIcons{
+    font-size: 1rem;
+}
+
     .logoHeaderSup {
         width: 2rem;
         height: 2rem;
     }
 
-    .email {
-        display: none;
+    span {
+        font-size: 1rem;
     }
 
-    .cellphone {
-        display: none;
+    nav>ul {
+        flex-direction: column;
+        background-color: $colorHeaderInferior;
+        position: fixed;
+        left: 0;
+        top: 158px;
+        width: 100%;
+        height: 0px;
+        transition: all 300ms ease;
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
     }
 
-    .search {
-        display: none;
+
+    #label__check {
+        display: block;
     }
 
-    .logo span {
-        display: none;
+    .icon__menu {
+        display: flex;
     }
 
-    // .liLogo{
-    //     width:fit-content;
-    //     height: 2rem;
-    // }
+    #check__menu:checked~nav>ul {
+        height: 400px;
+        visibility: visible;
+        opacity: 1;
+    }
 
     .main {
         font-size: .9rem;
     }
 
-    #infoParrafo{
-        text-align: center;
+    .divSection {
+        display: none !important;
     }
 
+    .divSectionSmall {
+        display: flex !important;
+    }
+
+
+}
+
+@media (min-width: 768px) {
+    .divSection {
+        display: flex !important;
+    }
+
+    .divSectionSmall {
+        display: none !important;
+    }
+
+}
+
+
+// Large devices (desktops, 992px and up)
+@media (max-width: 992px) {
+
+
     .galeria {
+
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
         grid-template-areas:
             "img1";
+
     }
 
-    .habitaciones {
-        flex-direction: column;
-        padding: 5rem 0rem;
-    }
 
     .atraccion {
         flex-direction: column;
@@ -100,67 +215,33 @@
         margin-top: 1rem;
         margin-right: 1rem;
     }
+}
 
-    .lightBox {
+@media (min-width: 992px) {
+    .grupoHabitacionesSmall {
         display: none;
+    }
+}
+
+
+// X-Large devices (large desktops, 1200px and up)
+@media (max-width: 1200px) {
+
+    span {
+        font-size: .7rem;
+    }
+
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1200px) {
+
+    span {
+        font-size: 1rem;
     }
 
 }
 
 
-@media screen and (max-width: 300px) {
-
-    .logoHeaderSup {
-        width: 2rem;
-        height: 2rem;
-    }
-
-    .email {
-        display: none;
-    }
-
-    .cellphone {
-        display: none;
-    }
-
-    .search {
-        display: none;
-    }
-
-    .logo span {
-        display: none;
-    }
-
-    .galeria {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        grid-template-areas:
-            "img1";
-
-    }
-
-
-    .habitaciones {
-        flex-direction: column;
-        padding-top: 6rem;
-    }
-
-    .atraccion {
-        flex-direction: column;
-        padding: 5rem 0rem;
-    }
-
-    .encabezado {
-        margin-top: 1rem;
-        margin-right: 1rem;
-    }
-
-    .lightBox {
-        display: none;
-    }
-
-    /* .liLogo{
-        display: none;
-    } */
-
-}
+// XX-Large devices (larger desktops, 1400px and up)
+@media (max-width: 1400px) {}

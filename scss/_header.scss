@@ -1,115 +1,14 @@
-.header {
-    width: 100%;
-    height: 20vh;
-    grid-area: header;
-    //padding-top: 0.313rem;
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(236, 236, 213);
-}
-
-.headerSup {
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: rgb(5, 5, 5);
-    background-color: rgb(218, 204, 82);
-    align-self: center;
-    font-size: .5rem;
-
-}
-
-.logoHeaderSup {
-    width: 3rem;
-    height: 3rem;
-    padding: 0rem 1.25rem;
-    *display: flex;
-    *justify-content: start;
-}
-
-
-/* .email {}
-
-.cellphone {} */
-
-
-.search input {
-    background-color: #ffffff;
-    color: black;
-    border-radius: 0.313rem;
-    border: 3px solid rgb(17, 18, 19);
-    width: 12.5rem;
-    padding: 0.625rem;
-}
-
-.headerSupIcons {
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 0px 20px;
-    gap: 2rem;
-    color: rgb(63, 85, 78);
-    font-size: 1.5rem;
-}
-
-.headerSupIcons img {
-    padding: 0px 20px;
-}
-
-/* Header Inferior Barra Menu */
-
-.headerNavMenu {
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.botonesHeaderMenu {
-    width: 100%;
-    height: 11vh;
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    background-color: rgb(218, 204, 82);
-    text-transform: uppercase;
-
-}
-
-.liLogo {
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    position: relative;
-    height: 100%;
-    width: fit-content;
-}
-
-.logo {
-    width: fit-content;
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-
-}
+$colorHeader:rgb(218, 204, 82);
+$colorHeaderSup:rgb(218, 204, 82);
+$colorHeaderInferior:rgb(218, 204, 82);
+$colorSubmenu:rgb(242, 239, 217);
+$colorHeaderFuente:rgb(0, 0, 0);
+$colorHover:rgb(236, 236, 213);
+$colorBoxShadow:rgba(251, 228, 228, 0.5);
+$colorHeaderSVG: rgba(101, 51, 25, 255);
 
 .logo:hover {
-    transform: scale(1.2);
+    transform: scale(1);
     transition-property: all;
     transition-duration: 1.5s;
     border-radius: .2rem;
@@ -120,79 +19,137 @@
 /* Class activa la ubicacion en donde estamos en la botonera del header y el sub menu */
 
 .active {
-    transform: scale(1.1);
+    transform: scale(1);
     opacity: 0.6;
     pointer-events: none;
-    background-color: rgb(236, 236, 213);
+    background-color: $colorSubmenu;
     color: rgb(3, 3, 3);
     box-shadow: 0px 0px 10px 0px rgba(7, 6, 6, 0.5);
     border-radius: .2rem;
 }
 
-.active0 {
-    transform: scale(1.1);
-    opacity: 0.6;
-    pointer-events: all;
-    background-color: rgb(236, 236, 213);
-    color: rgb(3, 3, 3);
-    box-shadow: 0px 0px 10px 0px rgba(7, 6, 6, 0.5);
-    border-radius: .2rem;
+//Estilos Header
+
+header {
+    width: 100%;
+    height: 17vh;
+    grid-area: header;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: $colorHeader;
+
+    .headerSuperior {
+        max-width: 115rem;
+        height: 6rem;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        border-bottom: .3rem solid #f0f0f0;
+
+        .logo {
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+
+            img {
+                width: 4rem;
+                height: 4rem;
+            }
+        }
+
+        .headerSupIcons {
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 0px 0px;
+            gap: 1rem;
+            font-size: 2rem;
+
+            li {
+
+                a {
+                    transform: scale(1.1);
+                    transition-property: all;
+                    transition-duration: 1.5s;
+                    border-radius: .2rem;
+                    background-color: $colorHeaderSup;
+
+                    i {
+                        color: $colorHeaderSVG;
+                        padding: .1px .4rem;
+                        display: flex;
+                        align-items: center;
+                        align-content: center;
+                    }
+                }
+            }
+        }
+
+    }
+
+    /*BARRA MENU*/
+
+    .containerMenu {
+        //display: flex;
+        width: 100%;
+        height: 4.68rem;
+        align-items: center;
+        align-content: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        background-color: $colorHeaderInferior;
+        padding: .4rem 1.25rem;
+
+        .menu {
+            display: flex;
+            max-width: 1200px;
+            margin: auto;
+            height: 100%;
+
+            nav {
+                height: 100%;
+
+                ul {
+                    height: 100%;
+                    display: flex;
+
+                    li {
+                        height: 100%;
+                        list-style: none;
+                        position: relative;
+
+                        a {
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                            padding: 14px;
+                            color: colorHeaderFuente;
+                            text-transform: uppercase;
+                            font-size: 14px;
+            
+                            img {
+                                width: 1.5rem;
+                                height: 1.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+    }
+
 }
 
-/*Header Inferior Barra Menu--> SUBMENU de Galeria de Fotos  */
-
-nav ul li ul {
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 90px;
-    left: -5px;
-    padding: 14px 0px;
-    visibility: hidden;
-    opacity: 0;
-    z-index: 10;
-    background: white;
-    box-shadow: 0px 0px 10px 0px rgba(165, 48, 48, 0.5);
-    transition: all 300ms ease;
-    border-radius: .5rem;
-}
-
-nav ul li:hover ul {
-    visibility: visible;
-    opacity: 1;
-    top: 70px;
-}
-
-nav ul li ul:before {
-    content: "";
-    width: 0;
-    height: 0;
-    border-left: 12px solid transparent;
-    border-right: 12px solid transparent;
-    border-bottom: 12px solid white;
-    position: absolute;
-    top: -12px;
-    left: 20px;
-}
-
-nav ul li ul li a {
-    display: block;
-    color: rgb(47, 82, 82);
-    padding: 6px;
-    padding-left: 14px;
-    margin-top: 10px;
-    font-size: 14px;
-    text-transform: uppercase;
-    transition: all 300ms ease;
-}
-
-nav ul li ul li a:hover {
-    opacity: 2;
-    background: rgb(218, 204, 82);
-    color: rgb(0, 0, 0);
-    transform: scale(1.1);
-    padding-left: 30px;
-    font-size: 14px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-}

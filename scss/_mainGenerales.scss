@@ -1,5 +1,4 @@
-
-
+$colorMain: rgb(236, 236, 213);
 
 /*Main Index HTML LA POSADA*/
 
@@ -8,9 +7,12 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: columns;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    background-color: rgb(243, 236, 236);
-
+    background-color: $colorMain;
+    padding: 2rem .1rem;
+    margin-top: 10rem;
 }
 
 #sectionPosada {
@@ -135,6 +137,11 @@
     }
 }
 
+.aux {
+    border-top: solid rgb(218, 204, 82) .2rem;
+    border-bottom: solid black .2rem;
+}
+
 /* MAIN Habitaciones Estilos que no comparte con el INDEX */
 
 #infoHabitacion {
@@ -150,6 +157,7 @@
     align-items: center;
     justify-content: center;
     padding: .5rem 1rem 2rem 2rem;
+    margin-bottom: .5rem;
 
     hgroup {
         h1 {
@@ -170,40 +178,111 @@
 
 
 .grupHabitaciones {
+    background-color: $colorMain;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas:
+        "habitaciones0"
         "habitaciones1"
         "habitaciones2"
-        "habitaciones3"
-        "habitaciones4";
+        "habitaciones3";
     row-gap: row;
-    //gap: 1rem 0rem;
+    margin: 1rem 0rem;
 }
 
 
-.habitaciones {
-    width:auto;
-    height: 55vh;
-    padding: 1rem 1rem;
+//Tarjeta Demo
+
+.divSection {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    flex-direction: row;
-    background-color: rgb(236, 236, 213);
-}
-
-
-
-.habitaciones img {
+    flex-wrap: wrap;
+    height: 35rem;
     width: 100%;
-    height: 100%;
-    box-shadow: 0px 0px 10px rgb(26, 24, 24);
-    border-radius: 1rem;
+
+    .imgHeaderDemo {
+
+        height: auto;
+        width: 50%;
+
+        a {
+            height: 35rem;
+            width: 100%;
+
+            .contImg {
+                height: 35rem;
+                width: 100%;
+
+                img {
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .descripcionAuxDemo {
+        padding: 0rem 1rem;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        height: auto;
+        width: 50%;
+        text-align: center;
+
+    }
+
 }
 
+
+//Version Mobile
+
+.divSectionSmall {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    //height: auto;
+    margin-bottom: 2rem;
+
+    .imgHeaderDemo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        //flex: 1;
+        height: auto;
+        width: 100%;
+
+        a {
+            //height: 100%;
+            width: 100%;
+
+            .contImg {
+                //height: 100%;
+                width: 100%;
+
+                img {
+                    //display: block;
+                    //height: auto;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .descripcionAuxDemoSmall {
+        //flex: 1;
+        padding: 0rem .1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        //height: 5rem;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+}
 
 
 /* MAIN SERVICIOS Estilos que no comparte con el INDEX */
@@ -239,36 +318,36 @@
     }
 }
 
-.resaltado {
-    background-color: aquamarine;
-}
-
-.resaltado .bloque-info {
-    background: #666;
-    color: #fff;
-    padding: 0.2em 0.5em;
-    box-sizing: border-box;
-    display: block;
-    max-height: 0;
-    overflow: hidden;
-    margin-top: 0.2em;
-    transition: max-height 0.5s;
-}
-
-.resaltado:hover .bloque-info {
-    max-height: 400px;
-    transition: max-height ease-in-out 1s;
-}
-
 
 .grupInformacion {
     display: flex;
     flex-direction: column;
-    padding: 0rem 1.25rem;
+    //padding: 1rem 1.25rem;
+    //margin-bottom: 1rem;
     text-align: center;
-    *justify-content: center;
-    *align-items: center;
-    *align-content: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    h2 {
+        margin: 0rem 0rem;
+        font-size: 3rem;
+    }
+
+    div {
+        .checklist {
+            margin: 2rem 0rem;
+
+            h3 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+                padding-bottom: .5rem;
+            }
+        }
+    }
 }
 
 .listadoBonito {
@@ -278,14 +357,14 @@
     flex-direction: column;
     padding: 1rem 1rem;
     border: solid rgb(155, 63, 63) .1em;
-    background-color: #2196F3;
+    background-color: rgb(218, 204, 82);
 }
 
 .listadoBonito li {
     text-align: center;
     border: solid rgb(155, 63, 63) .1em;
     padding: 1rem 1rem;
-    background-color: #fff;
+    background-color: $colorMain;
 }
 
 
@@ -297,14 +376,14 @@
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
-        "atracion1"
-        "atracion2"
-        "atracion3"
-        "atracion4"
-        "atracion5"
-        "atracion6";
+        "atraccion1"
+        "atraccion2"
+        "atraccion3"
+        "atraccion4"
+        "atraccion5"
+        "atraccion6";
     row-gap: row;
-    //gap: 10px;
+    margin: 1rem 0rem;
 }
 
 #headAlrededores {
@@ -315,11 +394,6 @@
     background-size: cover;
     background-position: center;
     opacity: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: .5rem 1rem 2rem 2rem;
 
     hgroup {
         h1 {
@@ -337,42 +411,6 @@
         }
     }
 }
-
-.atraccion {
-    width:auto;
-    height: 55vh;
-    padding: 1rem 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    flex-direction: row;
-    background-color: rgb(236, 236, 213);
-}
-
-
-
-.atraccion img {
-    width: 100%;
-    height: 100%;
-    box-shadow: 0px 0px 10px rgb(26, 24, 24);
-    border-radius: 1rem;
-}
-
-#aux{
-    padding-top: 3rem;
-}    
-
-.encabezado {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    text-align: center;
-    padding: 1rem 1rem;
-}
-
-
 
 
 /* MAIN GALLERY Estilos que no comparte con el INDEX */
@@ -408,7 +446,7 @@
 
 .galleryClassA {
     display: block;
-    box-shadow: 0 0 8px rgba(221, 6, 6, 0.5);
+    box-shadow: 0 0 8px rgba(10, 10, 10, 0.5);
 }
 
 .galleryClassA img {
@@ -424,7 +462,6 @@
     position: fixed;
     top: 0;
     left: 0;
-    //background: rgb(0, 0, 0, .5);
     transform: transform .6s ease-in-out;
     width: 100%;
     height: 100vh;
@@ -438,6 +475,8 @@
 .lightBox img {
     width: 75vh;
     max-height: 70vh;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px $colorHeaderSVG;
 }
 
 .lightBox:target {
@@ -448,9 +487,9 @@
 .close {
     display: block;
     position: absolute;
-    top: 40px;
-    right: 40px;
-    background: #550b51;
+    top: 80px;
+    right: 80px;
+    background: $colorHeaderSVG;
     color: aliceblue;
     width: 40px;
     height: 40px;
@@ -461,7 +500,7 @@
 
 .next {
     display: block;
-    background: #550b51;
+    background: $colorHeaderSVG;
     color: aliceblue;
     height: 30px;
     width: 30px;
@@ -470,6 +509,33 @@
 }
 
 /* MAIN CONTACTO Estilos que no comparte con el INDEX */
+
+#headContacto {
+    width: 100%;
+    height: 20rem;
+    color: rgb(248, 239, 239);
+    background-image: url(../assets/img/posada_de_campo_huerta_invierno_remolacha_.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    
+    hgroup {
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 3rem;
+            padding-bottom: 2rem;
+
+        }
+
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+            padding-bottom: 2rem;
+        }
+    }
+}
+
 .degradado {
     background: -webkit-gradient(linear, left top, left bottom, from(#0a5c71), to(#063642));
     background: -webkit-linear-gradient(top, #0a5c71 0%, #063642 100%);
@@ -488,10 +554,9 @@
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
-    padding-left: 0rem;
+    padding-top: 1rem;
 
 }
-
 
 
 .formBoton {

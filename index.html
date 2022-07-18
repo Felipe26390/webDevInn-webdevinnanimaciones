@@ -22,34 +22,21 @@
 
 </head>
 
-<body classs="body">
+<body classs="body" id="start">
 
-    <header class="header">
+    <header>
+        <div class="headerSuperior">
 
-        <div class="headerSup" id="img">
-
-            <div>
-                <a href="index.html" data-title="Posada de Campo">
-                    <img class="logoHeaderSup" src="./assets/img/posada los aromitos casa de campo icno logo.png"
-                        alt="Posada Logo">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/img/posada los aromitos casa de campo icno logo.png" alt="La Posada de Campo">
                 </a>
             </div>
 
-            <div class="email">
-                <address>posadalosaromitos@losaromitos.com</address>
-            </div>
-
-            <div class="cellphone">
-                <span> Contacto: 1532164706 </span>
-            </div>
-
-            <div class="search">
-                <input type="search" placeholder="¿Que buscas?">
-            </div>
 
             <div class="headerSupIcons">
                 <li title="Facebook" class="liLogo">
-                    <a class="logo" href="http://facebook.com/username" target="_blank" title="facebook">
+                    <a class="logo" href="http://facebook.com/username" target="_blank" title="Facebook">
                         <!-- <img src="./assets/SVG/logo1.svg" alt="Facebook"> -->
                         <i class="fa-brands fa-facebook-square"></i>
                     </a>
@@ -57,13 +44,13 @@
 
                 <li title="Instagram" class="liLogo">
                     <a class="logo" href="https://www.instagram.com/posada_los_aromitos/" target="_blank"
-                        title="instagram">
+                        title="Instagram">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
                 </li>
 
                 <li title="Whatsapp" class="liLogo">
-                    <a class="logo" href="http://whatsapp.com/user/username" target="_blank" title="whatsapp">
+                    <a class="logo" href="http://whatsapp.com/user/username" target="_blank" title="Whatsapp">
                         <i class="fa-brands fa-whatsapp-square"></i>
                     </a>
                 </li>
@@ -71,7 +58,7 @@
                 <li title="Ubicacion" class="liLogo">
                     <a class="logo"
                         href="https://www.google.com/maps/place/Ruta+Provincial+39+%26+Ruta+J,+Entre+R%C3%ADos,+Argentina/@-32.4696748,-58.4352981,407m/data=!3m1!1e3!4m5!3m4!1s0x95b028951ed1d76b:0x74644952f18a9620!8m2!3d-32.4787068!4d-58.437727"
-                        target="_blank" title="ubicacion">
+                        target="_blank" title="Ubicacion">
                         <i class="fa-solid fa-map-location-dot"></i>
 
                     </a>
@@ -81,81 +68,76 @@
 
         </div>
 
-        <nav class="headerNavMenu">
+        <div class="containerMenu">
 
-            <ul class="botonesHeaderMenu">
+            <div class="menu">
 
-                <li data-title="La posada de campo" class="liLogo">
-                    <a class="logo active " href="index.html">
-                        <img src="./assets/img/posada los aromitos casa de campo icno hogar.png" alt="Posada">
-                        <span>la posada</span>
-                    </a>
-                </li>
+                <input type="checkbox" id="check__menu">
+                <label for="check__menu" id="label__check">
+                    <i class="fas fa-bars icon__menu"></i>
+                </label>
 
-                <li title="Sobre nuestra historia" class="liLogo">
-                    <a class="logo" href="./sections/nosotros.html">
-                        <img src="./assets/img/posada los aromitos casa de campo icno grupo.png" alt="Nosotros">
-                        <span>nosotros</span>
-                    </a>
-                </li>
+                <nav>
+                    <ul>
+                        <li class="active">
+                            <a href="/index.html" id="selected">
+                                <img src="assets/img/posada los aromitos casa de campo icno hogar.png" alt="LA POSADA">
+                                <span>La Posada</span>
+                            </a>
+                        </li>
 
-                <li title="Descanso Habitaciones" class="liLogo">
-                    <a class="logo" href="./sections/habitaciones.html">
-                        <img src="./assets/img/posada los aromitos casa de campo icno bed.png"
-                            alt="Habitaciones Descanso">
-                        <span>habitaciones</span>
-                    </a>
-                </li>
+                        <li title="Sobre nuestra historia">
+                            <a class="logo" href="sections/nosotros.html">
+                                <img src="assets/img/posada los aromitos casa de campo icno grupo.png" alt="Nosotros">
+                                <span>Nosotros</span>
+                            </a>
+                        </li>
 
-                <li title="Servicios que ofrecemos" class="liLogo">
-                    <a class="logo" href="./sections/servicios.html">
-                        <img src="./assets/img/posada los aromitos casa de campo icno servicio-al-cliente.png"
-                            alt="Servicios">
-                        <span>servicios</span>
-                    </a>
-                </li>
+                        <li title="Descanso Habitaciones">
+                            <a class="logo" href="sections/habitaciones.html">
+                                <img src="assets/img/posada los aromitos casa de campo icno bed.png"
+                                    alt="Habitaciones Descanso">
+                                <span>Habitaciones</span>
+                            </a>
+                        </li>
 
+                        <li title="Geleria de Fotos">
+                            <a class="logo" href="sections/galeria.html">
+                                <img src="assets/img/posada los aromitos casa de campo icno gallery.png"
+                                    alt="Imagenes de Campo">
+                                <span>Galeria</span>
+                            </a>
+                        </li>
 
-                <li title="Turismo Rural" class="liLogo">
-                    <a class="logo" href="./sections/alrededores.html">
-                        <img src="./assets/img/posada los aromitos casa de campo icno tiempo-de-trabajo.png"
-                            alt="Alrededores Turismo">
-                        <span>alrededores</span>
-                    </a>
-                </li>
+                        <li title="Servicios que ofrecemos">
+                            <a class="logo" href="sections/servicios.html">
+                                <img src="assets/img/posada los aromitos casa de campo icno servicio-al-cliente.png"
+                                    alt="Servicios">
+                                <span>Servicios</span>
+                            </a>
+                        </li>
 
+                        <li title="Turismo Rural">
+                            <a class="logo" href="sections/alrededores.html">
+                                <img src="assets/img/posada los aromitos casa de campo icno tiempo-de-trabajo.png"
+                                    alt="Alrededores Turismo">
+                                <span>Alrededores</span>
+                            </a>
+                        </li>
 
-                <li title="Geleria de Fotos" class="liLogo">
-                    <a class="logo" href="./sections/galeria.html">
-                        <img src="./assets/img/posada los aromitos casa de campo icno gallery.png"
-                            alt="Imagenes de Campo">
-                        <span>galeria</span>
-                    </a>
+                        <li title="No esperes mas contactanos">
+                            <a class="logo" href="sections/contacto.html">
+                                <img src="assets/img/posada los aromitos casa de campo icno contacto.png"
+                                    alt="Contactanos">
+                                <span>Contacto</span>
+                            </a>
+                        </li>
 
-                    <ul class="botonesHeaderSubMenu">
-                        <li title="la casa"><a href="./sections/galeriaLaCasa.html">la casa</a></li>
-                        <li title="los cuartos"><a href="./sections/losCuartos.html">los cuartos</a></li>
-                        <li title="la granja"><a href="#">la granja</a></li>
-                        <li title="la huerta"><a href="#">la huerta</a></li>
-                        <li title="menu comidas"><a href="#">nuestras comidas</a></li>
-                        <li title="artesanales"><a href="#">productos artesanales</a></li>
                     </ul>
+                </nav>
+            </div>
 
-                </li>
-
-                <li title="No esperes mas contactanos" class="liLogo">
-                    <a class="logo" href="./sections/contacto.html">
-                        <img src="./assets/img/posada los aromitos casa de campo icno contacto.png" alt="Contactanos">
-                        <span>contacto</span>
-                    </a>
-                </li>
-
-
-
-            </ul>
-
-        </nav>
-
+        </div>
 
     </header>
 
@@ -199,23 +181,19 @@
 
     <footer class="footer">
 
-        <nav class="footerNavMenu">
+        <div class="footerNavMenu">
 
             <ul class="botonesFooterMenu">
+
+                <li><a class="logo" href="./index.html">la posada</a></li>
+
                 <li><a class="logo" href="./sections/nosotros.html">nosotros</a></li>
 
-                <li><a class="logo" href="./sections/nosotros.html">contacto</a></li>
+                <li><a class="logo" href="./sections/contacto.html">contacto</a></li>
 
                 <li><a class="logo" href="./sections/galeria.html">galeria</a></li>
 
-                <li><a class="logo" href="#img">inicio</a></li>
-
-                <!-- Maps Demo -->
-
-                <div><input type="button" value="Twitter" class="btn--twitter"></div>
-                <div><input type="button" value="Facebook" class="btn--facebook"></div>
-                <div><input type="button" value="Instagram" class="btn--instagram"></div>
-
+                <li><a class="logo" href="#start">inicio</a></li>
 
                 <div class="headerSupIcons">
                     <li class="liLogo">
@@ -250,7 +228,7 @@
 
             </ul>
 
-        </nav>
+        </div>
 
         <address class="firma">
             Made by FJB &#128512.

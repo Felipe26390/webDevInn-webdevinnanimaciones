@@ -1,10 +1,6 @@
 /* Variables Generales */
 
-$colorBody: rgb(211, 147, 147);
-$colorHeader: rgb(69, 189, 109);
-$colorHeaderSup: rgba(0, 0, 0, 0.5);
-$colorHeaderInf: rgba(0, 0, 0, 0.75);
-$colorMain: rgba(255, 255, 255, .2);
+$colorBody:  rgb(238, 245, 238);
 $colorMainInfo: rgba(255, 255, 255, .2);
 $colorFooter: #181818;
 $tipo-titular: 'Playfair Display',serif;
@@ -14,6 +10,7 @@ $tipo-principal: 'Inter',sans-serif;
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 /* Reseteamos los enlaces para funcionar como cajas... */
@@ -39,40 +36,11 @@ html {
   scroll-behavior: smooth;
 }
 
-[data-title]:hover:after {
-  opacity: 1;
-  transition: all 0.1s ease 0.5s;
-  visibility: visible;
-}
-
-[data-title]:after {
-  content: attr(data-title);
-  background-color: #333;
-  color: #fff;
-  font-size: 14px;
-  font-family: Raleway;
-  position: absolute;
-  //padding: 3px 20px;
-  bottom: -1.6em;
-  left: 100%;
-  white-space: nowrap;
-  box-shadow: 1px 1px 3px #222222;
-  opacity: 0;
-  border: 1px solid #111111;
-  //z-index: 99999;
-  visibility: hidden;
-  border-radius: 6px;
-
-}
-
-[data-title] {
-  position: relative;
-}
 
 body {
   width: 100%;
   height: auto;
-  background-color: rgb(238, 245, 238);
+  background-color: $colorBody;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr auto auto;
